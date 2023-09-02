@@ -1,0 +1,20 @@
+.cika button{
+width: 250px;
+height: 35px;
+border-radius: 5px;
+background-color: #0086B0;
+color: white;
+font-family: var(--Harmattan);
+font-size: 18px ;
+font-weight: 500;
+border: none;
+outline: none;
+display: block;
+margin: 20px auto;
+}
+
+.sto h1{
+font-family: var(--Harmattan);
+font-size: 40px;
+color: #292929;
+}

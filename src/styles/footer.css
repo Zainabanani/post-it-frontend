@@ -1,0 +1,105 @@
+.futa{
+    background-color: #292929;
+    color: white;
+   padding-left: 20px;
+   height:100vh;
+   display: flex;
+   flex-direction: column;
+   padding-top: 20px;
+   
+}
+
+.futa h4{
+    font-family: var(--Harmattan);
+    font-size: 20px;
+font-weight: 700;
+}
+
+.futa h4 span{
+    color: #0086B0;
+}
+
+.futa p{
+font-family: var(--open-sans);
+font-weight: 400;
+font-size: 12px;
+}
+.futa button{
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: #0086B0;
+    border-radius: 2px;
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.futa input{
+    width: 260px;
+    height: 31px;
+    padding: 10px;
+
+}
+
+
+@media (min-width: 720px){
+    .futa{
+        height: 110vh;
+        padding-left: 60px;
+    }
+    .futa p{
+        font-size: 16px;
+    }
+    .futa h4{
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .futa{
+        height: 388px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-left: 10px;
+        padding-top: 60px;
+    }
+
+    .futa p{
+     font-family: var(--open-sans);   
+     font-size: 16px;
+     font-weight: 400;
+     letter-spacing: 0em;
+text-align: left;
+line-height: 28px;
+    }
+
+    .sig{
+       
+        margin-top: 30px;
+    }
+
+    .futa input{
+        width: 337px;
+        height: 39px;
+        border-radius: 2px;
+    } 
+
+    .futa button{
+        
+width: 103px;
+height: 27px;
+border-radius: 2px;
+position: relative;
+right: 115px;
+bottom: 3px;
+
+    }
+}
+
+
+
+
+
+
