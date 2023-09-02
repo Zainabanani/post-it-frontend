@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import "../styles/mystories.css"
+import Nostory from "./Nostory";
 
 
 const Mystories = () => {
@@ -38,6 +39,10 @@ const handleDelete = async (id) => {
   if (data.success) {
     window.location.reload();
   }
+}
+
+if (stories.length === 0){
+  return <Nostory/>
 }
 
   return (

@@ -7,13 +7,16 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Register = () => {
   const redirect = useNavigate();
   const [username, setUsername] = useState ("")
   const [email, setEmail] = useState ("")
   const [password, setPassword] = useState ("")
+  const [loading, setLoading] = useState (true)
  const handleSubmit = async (e)=>{
 e.preventDefault();
+setLoading (false)
 const {data} = await axios.post('http://localhost:3000/api/v1/register', {email, username, password,});
 if (data.success){
   // console.log(data);
@@ -45,7 +48,7 @@ if (data.success){
         <input type="password" value={password} onChange={(e) =>setPassword (e.target.value)}/>
       </div>
       <div>
-        <button type='submit' onClick={handleSubmit}>Continue</button>
+        <button type='submit' onClick={handleSubmit}>{loading ? 'Continue' : 'Signing in....'}</button>
       </div>
       <div className='have'>
         <p>Already have an account? <Link to="/login"> <span>Sign In</span></Link></p>

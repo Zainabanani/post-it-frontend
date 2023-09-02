@@ -11,8 +11,10 @@ const Login = () => {
   const redirect = useNavigate();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState ('')
+  const [loading, setLoading] = useState (true)
   const handleSubmit = async (e)=>{
-    e.preventDefault
+    e.preventDefault ();
+    setLoading (false)
     const {data} = await axios.post('http://localhost:3000/api/v1/login', {email, password});
     if (data.success){
 localStorage.setItem("token", data.token)
@@ -36,7 +38,7 @@ redirect ("/welcome")
         <input type="password" value={password} onChange={(e) =>setPassword (e.target.value)}  />
       </div>
       <div>
-        <button type='submit' onClick={handleSubmit}>Continue</button>
+        <button type='submit' onClick={handleSubmit}>{loading ? `Continue` : "Logging in..."}</button>
       </div>
       <div className='have'>
         <p>No account? <Link to="/register"><span>Sign Up</span></Link></p>

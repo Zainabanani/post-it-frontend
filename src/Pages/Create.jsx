@@ -77,6 +77,7 @@ const handleChange = async (e)=>{
         onChange={(e) =>setImage (e.target.files[0])} />
       </Form.Group>
       <button>Publish Story</button>
+      
     </Form>
       </div>
       

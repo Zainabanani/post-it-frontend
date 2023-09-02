@@ -5,6 +5,7 @@ import "../styles/home.css";
 import daya from "../assets/daya.png"
 import biyu from "../assets/biyu.png"
 import uku from "../assets/uku.png"
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
 egestas massa velit aliquam. Molestim bibendum  <br />
 hnt ipsum orci, platea aliquam id ut. 
      </p>
-     <button to="/signup">Get started</button>
+     <Link to="/register"><button>Get Started</button></Link>
       </div>
      
      </div >
@@ -53,7 +54,7 @@ hnt ipsum orci, platea aliquam id ut.
      <p>Do you want to write or discover stories from writers on any topic?</p>
      </div>
      <div>
-      <input type="email" placeholder='Email address' /> <button>Get Started</button>
+      <input type="email" placeholder='Email address' /> <Link to="/register"><button>Get Started</button></Link>
      </div>
      </div>
     <Footer />
