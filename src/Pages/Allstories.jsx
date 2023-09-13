@@ -17,7 +17,7 @@ const Allstories = () =>  {
   const [stories, setStories] = useState ([]);
   const [readmore, setReadmore] = useState (true)
   const getStories = async () =>{
-    const {data: {stories}} = await axios ("http://localhost:3000/api/v1/story/", {
+    const {data: {stories}} = await axios ("https://zainab-postit.onrender.com/api/v1/story/", {
       headers:{
         Authorization: `Bearer ${token}`
       }

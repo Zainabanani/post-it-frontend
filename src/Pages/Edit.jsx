@@ -16,7 +16,7 @@ const Edit = () => {
   const [loading, setLoading] = useState (true);
   const token = localStorage.getItem("token");
   const getStories = async () =>{
-    const {data : {story}} = await axios(`http://localhost:3000/api/v1/story/${storyId}`, {
+    const {data : {story}} = await axios(`https://zainab-postit.onrender.com/api/v1/story/${storyId}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -33,7 +33,7 @@ const Edit = () => {
 
   const handleChange = async (e) => {
     e.preventDefault ();
-    const {data} = await axios.patch(`http://localhost:3000/api/v1/story/${storyId}`, {title, tag, description}, {
+    const {data} = await axios.patch(`https://zainab-postit.onrender.com/api/v1/story/${storyId}`, {title, tag, description}, {
       headers: {
         Authorization: `Bearer ${token}`
       }

@@ -11,8 +11,7 @@ import axios from "axios";
 const Welcome = () => {
   const [user, setUser] = useState ("")
   const token = localStorage.getItem ("token");
-const getUser = async ()=>{
-  const {data} = await axios('http://localhost:3000/api/v1/user', {
+const getUser = async ()=>{const {data} = await axios('https://zainab-postit.onrender.com/api/v1/user', {
     headers: {
       Authorization: `Bearer ${token}`
     },

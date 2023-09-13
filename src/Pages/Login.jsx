@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e)=>{
     e.preventDefault ();
     setLoading (false)
-    const {data} = await axios.post('http://localhost:3000/api/v1/login', {email, password});
+    const {data} = await axios.post('https://zainab-postit.onrender.com/api/v1/login', {email, password});
     if (data.success){
 localStorage.setItem("token", data.token)
 redirect ("/welcome")

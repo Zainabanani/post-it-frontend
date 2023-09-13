@@ -14,10 +14,12 @@ const Register = () => {
   const [email, setEmail] = useState ("")
   const [password, setPassword] = useState ("")
   const [loading, setLoading] = useState (true)
+
+  
  const handleSubmit = async (e)=>{
 e.preventDefault();
 setLoading (false)
-const {data} = await axios.post('http://localhost:3000/api/v1/register', {email, username, password,});
+const {data} = await axios.post('https://zainab-postit.onrender.com/api/v1/register', {email, username, password,});
 if (data.success){
   // console.log(data);
   redirect ("/login")

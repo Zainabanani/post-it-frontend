@@ -11,6 +11,7 @@ import {
      Create,
      Home,
      Welcome,
+
    } from "./pages";
 
 import './App.css'
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/create" element={<Create />} />
            <Route path="/single/:storyId" element={<Singlestories />} />
            <Route path="/edit/:storyId" element={<Edit />} />
+
            <Route path="*" element={<Error />} />
       </Routes>
     </Router>

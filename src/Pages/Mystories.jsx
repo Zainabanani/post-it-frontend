@@ -10,16 +10,17 @@ import Nostory from "./Nostory";
 const Mystories = () => {
   const token = localStorage.getItem("token");
   const [readMore, setReadMore] = useState(true);
-  const [stories, setStories] = useState("");
+  const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(true);
   const getStories = async () => {
     const {
       data: { stories },
-    } = await axios("http://localhost:3000/api/v1/story", {
+    } = await axios("https://zainab-postit.onrender.com/api/v1/story", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
+
     setLoading(false);
     setStories(stories);
     
@@ -31,7 +32,7 @@ const Mystories = () => {
     setReadMore(!readMore)
   }
 const handleDelete = async (id) => {
-  const {data} = await axios.delete(`http://localhost:3000/api/v1/story/${id}`, {
+  const {data} = await axios.delete(`https://zainab-postit.onrender.com/api/v1/story/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -41,12 +42,15 @@ const handleDelete = async (id) => {
   }
 }
 
-if (stories.length === 0){
+if (!loading && stories.length === 0){
   return <Nostory/>
 }
 
   return (
-    <div className="whole container">
+    
+   <>
+
+    {loading ? <h1>Loading</h1> :  <div className="whole container">
        <div className="stories container mb-3">
                     <div>
                       <h1>My Stories</h1>
@@ -91,7 +95,8 @@ return (
   })
 }
       </div>
-    </div>
+    </div>}
+   </>
   );
 };
 

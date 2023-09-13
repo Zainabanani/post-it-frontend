@@ -23,7 +23,7 @@ const handleChange = async (e)=>{
   formdata.append("tag", tag)
   formdata.append("description", description)
   formdata.append("image", image)
-  const res = await axios.post("http://localhost:3000/api/v1/story", formdata, {
+  const res = await axios.post('https://zainab-postit.onrender.com/api/v1/story', formdata, {
     headers: {
       Authorization: `Bearer ${token}`
     },

@@ -18,7 +18,7 @@ const Singlestories = () => {
   const getStory = async () => {
     const {
       data: { story },
-    } = await axios(`http://localhost:3000/api/v1/story/${storyId}`, {
+    } = await axios(`https://zainab-postit.onrender.com/api/v1/story/${storyId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
