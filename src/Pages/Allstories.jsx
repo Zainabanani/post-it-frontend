@@ -74,7 +74,7 @@ const Allstories = () =>  {
               <p><span>{new Date(createdAt).toDateString()}</span></p>
              </div>
               <p className="des ">{readmore ? `${description.substring (0, 100)}...`  : description}</p>
-               <Link to={`/single/${_id}`}> <p> <AiOutlineArrowRight/>Readmore...</p></Link>
+               <Link to={`/single/${_id}`}> <p> <AiOutlineArrowRight/>Readmore....</p></Link>
             </div>
           );
         })}
